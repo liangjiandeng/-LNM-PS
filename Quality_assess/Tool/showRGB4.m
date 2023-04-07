@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Description: 
+% Description:
 %           Visualize and print an eight-band multispectral image.
-% 
+%
 % Interface:
 %           showImage8(I_MS,print,id,flag_cut_bounds,dim_cut,th_values,L)
 %
@@ -16,9 +16,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % function showImage8(I_MS,print,id,flag_cut_bounds,dim_cut,th_values,L,location)
 function showRGB4(Ori_HRMS,fusion,location)
-
-th_MSrgb = image_quantile(Ori_HRMS(:,:,[7,3,2]), [0.01 0.99]);
-I_fuse = image_stretch(fusion(:,:,[7,3,2]),th_MSrgb);
+if size(fusion,3) == 8
+    th_MSrgb = image_quantile(Ori_HRMS(:,:,[7,3,2]), [0.01 0.99]);
+    I_fuse = image_stretch(fusion(:,:,[7,3,2]),th_MSrgb);
+else
+    th_MSrgb = image_quantile(Ori_HRMS(:,:,[3,2,1]), [0.01 0.99]);
+    I_fuse = image_stretch(fusion(:,:,[3,2,1]),th_MSrgb);
+end
 ent=rectangleonimage(I_fuse,location, 0.5, 3, 2, 2, 3);
-figure,imshow(ent,[]);
+imshow(ent,[]);
 end

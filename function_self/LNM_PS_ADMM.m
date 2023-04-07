@@ -1,19 +1,20 @@
-function X_out  =  LNM_PS_ADMM(I_LRMS, opts, Phi_inv_P)
+function X_out  =  LNM_PS_ADMM(opts)
 %% Initiation
-omaxit  = opts.omaxit;
-tol     = opts.tol;
-Nways   = opts.Nways;
-ratio   = opts.ratio;
-eta_1   = opts.eta_1;
-eta_2   = opts.eta_2;
-sensor  = opts.sensor;
-Theta_1 = zeros(Nways);
-Theta_2 = zeros(Nways);
-X_init  = interp23tap(I_LRMS, ratio);
-X       = X_init;
-% U       = zeros(Nways);
-V       = zeros(Nways);
-par     = FFT_kernel(ratio, sensor, Nways);
+omaxit    = opts.omaxit;
+tol       = opts.tol;
+Nways     = opts.Nways;
+ratio     = opts.ratio;
+eta_1     = opts.eta_1;
+eta_2     = opts.eta_2;
+sensor    = opts.sensor;
+I_LRMS    = opts.I_LRMS;
+Phi_inv_P = opts.Phi_inv_P;
+Theta_1   = zeros(Nways);
+Theta_2   = zeros(Nways);
+X_init    = interp23tap(I_LRMS, ratio);
+X         = X_init;
+V         = zeros(Nways);
+par       = FFT_kernel(ratio, sensor, Nways);
 X_k = X;
 
 %% ADMM

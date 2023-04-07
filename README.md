@@ -3,13 +3,16 @@
 **Homepage:** https://liangjiandeng.github.io/
 
 # How to use?
-- Directly run: ``demo_fusion.m`` for a WV3 example
+- Choose the sensor is ``none``,  then run: ``demo_fusion.m`` for a GF2 example；
+- Choose the sensor is ``QB``,  then run: ``demo_fusion.m`` for a QB example；
+- Choose the sensor is ``WV3``,  then run: ``demo_fusion.m`` for a WV3 example；
+- In fact, we only give three image from three different sensor, i.e., GF2, QB, and WV3, and correspondingly including three pre-trained results, i.e., Phi_inv_P of given data, respectively. If need more test data or more pre-trained result from other sensors, please train the pre-trained network, and then obtain the pre-trained result by yourself according to Fig. 5.
 
  
 # Citation
 ```bibtex
 @ARTICLE{wen2023tgrs,
-author={Wen, Rui and Deng, Liang-Jian and Wu, Zhong-Cheng and Wu, Xiao and Vivone, Gemine},
+author={Wen, Rui, and Wu, Zhong-Cheng and Deng, Liang-Jian and Wu, Xiao and Vivone, Gemine},
 booktitle={IEEE Trans. Geosci. Remote Sens.},
 title={A Novel Spatial Fidelity with Learnable Nonlinear Mapping for Panchromatic Sharpening},
 year={2023},
