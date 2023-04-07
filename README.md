@@ -9,7 +9,7 @@
 # Citation
 ```bibtex
 @ARTICLE{wen2023tgrs,
-author={Wen, Rui, and Wu, Zhong-Cheng and Deng, Liang-Jian and Wu, Xiao and Vivone, Gemine},
+author={Wen, Rui and Deng, Liang-Jian and Wu, Zhong-Cheng and Wu, Xiao and Vivone, Gemine},
 booktitle={IEEE Trans. Geosci. Remote Sens.},
 title={A Novel Spatial Fidelity with Learnable Nonlinear Mapping for Panchromatic Sharpening},
 year={2023},
