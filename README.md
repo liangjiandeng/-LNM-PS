@@ -6,7 +6,7 @@
 - Choose the sensor is ``none``,  then run: ``demo_fusion.m`` for a GF2 example；
 - Choose the sensor is ``QB``,  then run: ``demo_fusion.m`` for a QB example；
 - Choose the sensor is ``WV3``,  then run: ``demo_fusion.m`` for a WV3 example；
-- ``Note that'', in the toolbox, we only give three examples from three different sensor, i.e., GF2, QB, and WV3, and correspondingly including three pre-trained results, i.e., Phi_inv_P in the given data, respectively. If you need more test more examples for other sensors, please train and get the pre-trained network, and then obtain the pre-trained result by yourself according to Fig. 5.
+- ``Note that, in the toolbox, we only give three examples from three different sensor, i.e., GF2, QB, and WV3, and correspondingly including three pre-trained results, i.e., Phi_inv_P in the given data, respectively. If you need more test more examples for other sensors, please train and get the pre-trained network, and then obtain the pre-trained result by yourself according to Fig. 5.``
 
  
 # Citation
